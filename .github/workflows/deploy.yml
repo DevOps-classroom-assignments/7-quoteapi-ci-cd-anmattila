@@ -1,5 +1,7 @@
 name: Render Deployment
 
+# on: release: types: [published] doens't wait ci-workflow
+
 on: 
   workflow_run:
     workflows: ["Ci-workflow"]
