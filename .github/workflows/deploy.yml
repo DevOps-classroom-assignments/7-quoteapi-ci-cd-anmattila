@@ -17,4 +17,5 @@ jobs:
         env:
           deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: 
+          echo "Triggering deployment at Render.com"
           curl "$deploy_url"
