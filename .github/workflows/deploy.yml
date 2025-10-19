@@ -15,6 +15,7 @@ jobs:
     steps:
       - name: Render deployment with tag
         if: ${{ startsWith(github.event.workflow_run.head_commit.ref, 'refs/tags/v') }}
+        # context access might be invalid: ref ?
         env:
           deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK }}
         run: 
